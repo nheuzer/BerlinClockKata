@@ -20,7 +20,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $minute = "00";
         //Act
-        $actual = $test->afficher_minutes($minute);
+        $actual = $test->afficher_par_minutes($minute);
         //Assert
         $this->assertEquals("OOOO",$actual);
     }
@@ -30,7 +30,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $minute = "01";
         //Act
-        $actual = $test->afficher_minutes($minute);
+        $actual = $test->afficher_par_minutes($minute);
         //Assert
         $this->assertEquals("YOOO",$actual);
     }
@@ -40,7 +40,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $minute = "02";
         //Act
-        $actual = $test->afficher_minutes($minute);
+        $actual = $test->afficher_par_minutes($minute);
         //Assert
         $this->assertEquals("YYOO",$actual);
     }
@@ -50,7 +50,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $minute = "03";
         //Act
-        $actual = $test->afficher_minutes($minute);
+        $actual = $test->afficher_par_minutes($minute);
         //Assert
         $this->assertEquals("YYYO",$actual);
     }
@@ -60,10 +60,22 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $minute = "04";
         //Act
-        $actual = $test->afficher_minutes($minute);
+        $actual = $test->afficher_par_minutes($minute);
         //Assert
         $this->assertEquals("YYYY",$actual);
     }
+
+    public function test_diplay_given00_shouldReturnOOOOOOOOOOO(){
+        //Arrange
+        $test = new BerlinClockKata();
+        $minute = "00";
+        //Act
+        $actual = $test->afficher_par_5_minutes($minute);
+        //Assert
+        $this->assertEquals("OOOOOOOOOOO",$actual);
+    }
+
+
 
 
 }
