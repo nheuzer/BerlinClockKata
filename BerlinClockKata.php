@@ -17,53 +17,23 @@ class BerlinClockKata{
     }
 
     public function afficher_par_5_minutes($minute) : string{
-        if ($minute === "00"){
-            echo("OOOOOOOOOOO");
-            return "OOOOOOOOOOO";
+        $nombreLumiereAllumee = $minute/5;
+        $compteurMultiple3 = 1;
+        $aReturn = "";
+        for ($i=0; $i < $nombreLumiereAllumee; $i++){
+            if ($compteurMultiple3%3 ===0){
+                $aReturn .= "R";
+                $compteurMultiple3 = 0;
+            }else{
+                $aReturn .= "Y";
+            }
+            $compteurMultiple3++;
         }
-        if ($minute === "05"){
-            echo("YOOOOOOOOOO");
-            return "YOOOOOOOOOO";
+        for ($i = 0; $i < 11-$nombreLumiereAllumee; $i++){
+            $aReturn .= "O";
         }
-        if ($minute === "10"){
-            echo("YYOOOOOOOOO");
-            return "YYOOOOOOOOO";
-        }
-        if ($minute === "15"){
-            echo("YYROOOOOOOO");
-            return "YYROOOOOOOO";
-        }
-        if ($minute === "20"){
-            echo("YYRYOOOOOOO");
-            return "YYRYOOOOOOO";
-        }
-        if ($minute === "25"){
-            echo("YYRYYOOOOOO");
-            return "YYRYYOOOOOO";
-        }
-        if ($minute === "30"){
-            echo("YYRYYROOOOO");
-            return "YYRYYROOOOO";
-        }
-        if ($minute === "35"){
-            echo("YYRYYRYOOOO");
-            return "YYRYYRYOOOO";
-        }
-        if ($minute === "40"){
-            echo("YYRYYRYYOOO");
-            return "YYRYYRYYOOO";
-        }
-        if ($minute === "45"){
-            echo("YYRYYRYYROO");
-            return "YYRYYRYYROO";
-        }
-        if ($minute === "50"){
-            echo("YYRYYRYYRYO");
-            return "YYRYYRYYRYO";
-        }
-        if ($minute === "55"){
-            echo("YYRYYRYYRYY");
-            return "YYRYYRYYRYY";
-        }
+        echo $aReturn;
+        return $aReturn;
+
     }
 }
