@@ -12,7 +12,7 @@ class BerlinClockKata{
         for($i=0; $i< $difference; $i++){
             $aReturn .= "O";
         }
-        echo ($aReturn);
+        //echo ($aReturn);
         return $aReturn;
     }
 
@@ -32,7 +32,7 @@ class BerlinClockKata{
         for ($i = 0; $i < 11-$nombreLumieresAllumees; $i++){
             $aReturn .= "O";
         }
-        echo $aReturn;
+        //echo $aReturn;
         return $aReturn;
     }
 
@@ -46,7 +46,7 @@ class BerlinClockKata{
         for($i=0; $i< $difference; $i++){
             $aReturn .= "O";
         }
-        echo ($aReturn);
+        //echo ($aReturn);
         return $aReturn;
     }
 
@@ -59,7 +59,7 @@ class BerlinClockKata{
         for ($i = 0; $i < 4 - $nombreLumieresAllumees; $i++){
             $aReturn .= "O";
         }
-        echo($aReturn);
+        //echo($aReturn);
         return $aReturn;
     }
 
@@ -70,7 +70,7 @@ class BerlinClockKata{
         }else{
             $aReturn = "O";
         }
-        echo($aReturn);
+        //echo($aReturn);
         return $aReturn;
     }
 
