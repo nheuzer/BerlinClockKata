@@ -275,6 +275,14 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("RRRO",$actual);
     }
 
-
+    public function test_display_given20h_for5HoursBlocs_shouldReturnRRRR(){
+        //Arrange
+        $test = new BerlinClockKata();
+        $heure = "20";
+        //Act
+        $actual = $test->afficher_par_5_heures($heure);
+        //Assert
+        $this->assertEquals("RRRR",$actual);
+    }
 
 }
