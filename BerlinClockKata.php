@@ -21,5 +21,9 @@ class BerlinClockKata{
             echo("OOOOOOOOOOO");
             return "OOOOOOOOOOO";
         }
+        if ($minute === "05"){
+            echo("YOOOOOOOOOO");
+            return "YOOOOOOOOOO";
+        }
     }
 }
