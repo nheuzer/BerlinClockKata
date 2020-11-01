@@ -175,6 +175,16 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("YYRYYRYYRYO",$actual);
     }
 
+    public function test_diplay_given55_shouldReturnYYRYYRYYRYY(){
+        //Arrange
+        $test = new BerlinClockKata();
+        $minute = "55";
+        //Act
+        $actual = $test->afficher_par_5_minutes($minute);
+        //Assert
+        $this->assertEquals("YYRYYRYYRYY",$actual);
+    }
+
 
 
 
