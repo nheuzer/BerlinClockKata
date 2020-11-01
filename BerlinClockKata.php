@@ -73,4 +73,28 @@ class BerlinClockKata{
         echo($aReturn);
         return $aReturn;
     }
+
+    public function afficher_horloge_entiere($time) {
+        $separation = explode(":", $time);
+        $seconde = strval($separation[2]);
+        $minute = strval($separation[1]);
+        $heure = strval($separation[0]);
+        $aReturn = "";
+        $aReturn .= $this->afficher_par_secondes($seconde);
+        $moduloHeure = $heure%5;
+        $heurePar5 = $heure - $moduloHeure;
+        $aReturn .= "\n";
+        $aReturn .= $this->afficher_par_5_heures($heurePar5);
+        $aReturn .= "\n";
+        $aReturn .= $this->afficher_par_heures($moduloHeure);
+        $aReturn .= "\n";
+        $moduloMinute = $minute%5;
+        $minutePar5 = $minute - $moduloMinute;
+        $aReturn .= $this->afficher_par_5_minutes($minutePar5);
+        $aReturn .= "\n";
+        $aReturn .= $this->afficher_par_minutes($moduloMinute);
+        echo "$aReturn";
+
+        return $aReturn;
+    }
 }
