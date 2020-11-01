@@ -17,10 +17,10 @@ class BerlinClockKata{
     }
 
     public function afficher_par_5_minutes($minute) : string{
-        $nombreLumiereAllumee = $minute/5;
+        $nombreLumieresAllumees = $minute/5;
         $compteurMultiple3 = 1;
         $aReturn = "";
-        for ($i=0; $i < $nombreLumiereAllumee; $i++){
+        for ($i=0; $i < $nombreLumieresAllumees; $i++){
             if ($compteurMultiple3%3 ===0){
                 $aReturn .= "R";
                 $compteurMultiple3 = 0;
@@ -29,7 +29,7 @@ class BerlinClockKata{
             }
             $compteurMultiple3++;
         }
-        for ($i = 0; $i < 11-$nombreLumiereAllumee; $i++){
+        for ($i = 0; $i < 11-$nombreLumieresAllumees; $i++){
             $aReturn .= "O";
         }
         echo $aReturn;
@@ -51,25 +51,15 @@ class BerlinClockKata{
     }
 
     public function afficher_par_5_heures($heure) : string{
-        if ($heure === "00"){
-            echo("OOOO");
-            return "OOOO";
+        $nombreLumieresAllumees = $heure/5;
+        $aReturn = "";
+        for ($i = 0; $i < $nombreLumieresAllumees; $i++){
+            $aReturn .= "R";
         }
-        if ($heure === "05"){
-            echo("ROOO");
-            return "ROOO";
+        for ($i = 0; $i < 4 - $nombreLumieresAllumees; $i++){
+            $aReturn .= "O";
         }
-        if ($heure === "10"){
-            echo("RROO");
-            return "RROO";
-        }
-        if ($heure === "15"){
-            echo("RRRO");
-            return "RRRO";
-        }
-        if ($heure === "20"){
-            echo("RRRR");
-            return "RRRR";
-        }
+        echo($aReturn);
+        return $aReturn;
     }
 }
