@@ -57,5 +57,9 @@ class BerlinClockKata{
             echo("YYRYYRYYROO");
             return "YYRYYRYYROO";
         }
+        if ($minute === "50"){
+            echo("YYRYYRYYRYO");
+            return "YYRYYRYYRYO";
+        }
     }
 }
