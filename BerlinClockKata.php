@@ -50,5 +50,10 @@ class BerlinClockKata{
         return $aReturn;
     }
 
-
+    public function afficher_par_5_heures($heure) : string{
+        if ($heure === "00"){
+            echo("OOOO");
+            return "OOOO";
+        }
+    }
 }
