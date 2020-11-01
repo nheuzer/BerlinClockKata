@@ -37,26 +37,17 @@ class BerlinClockKata{
     }
 
     public function afficher_par_heures($heure) : string{
-        if ($heure === "00"){
-            echo "OOOO";
-            return "OOOO";
+        $nombreDHeures = substr($heure, -1);
+        $difference = 4 - $nombreDHeures;
+        $aReturn = "";
+        for($i=0; $i<$nombreDHeures; $i++){
+            $aReturn .= "R";
         }
-        if ($heure === "01"){
-            echo "ROOO";
-            return "ROOO";
+        for($i=0; $i< $difference; $i++){
+            $aReturn .= "O";
         }
-        if ($heure === "02"){
-            echo "RROO";
-            return "RROO";
-        }
-        if ($heure === "03"){
-            echo "RRRO";
-            return "RRRO";
-        }
-        if ($heure === "04"){
-            echo "RRRR";
-            return "RRRR";
-        }
+        echo ($aReturn);
+        return $aReturn;
     }
 
 
