@@ -65,10 +65,9 @@ class BerlinClockKata{
 
     public function afficher_par_secondes($seconde) : string{
         $aReturn = "";
-        if ($seconde === "00"){
+        if ($seconde%2 === 0){
             $aReturn = "R";
-        }
-        if ($seconde === "01"){
+        }else{
             $aReturn = "O";
         }
         echo($aReturn);
