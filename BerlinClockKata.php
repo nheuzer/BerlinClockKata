@@ -68,6 +68,9 @@ class BerlinClockKata{
         if ($seconde === "00"){
             $aReturn = "R";
         }
+        if ($seconde === "01"){
+            $aReturn = "O";
+        }
         echo($aReturn);
         return $aReturn;
     }
