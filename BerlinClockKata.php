@@ -3,25 +3,16 @@ namespace BerlinClockKata;
 class BerlinClockKata{
 
     public function afficher_minutes($minute) : string{
-        if($minute === "00") {
-            echo("OOOO");
-            return "OOOO";
+        $nombreDeMinutes = substr($minute, -1);
+        $difference = 4 - $nombreDeMinutes;
+        $aReturn = "";
+        for($i=0; $i<$nombreDeMinutes; $i++){
+            $aReturn .= "Y";
         }
-        if($minute === "01") {
-            echo("YOOO");
-            return "YOOO";
+        for($i=0; $i< $difference; $i++){
+            $aReturn .= "O";
         }
-        if($minute === "02") {
-            echo("YYOO");
-            return "YYOO";
-        }
-        if($minute === "03") {
-            echo("YYYO");
-            return "YYYO";
-        }
-        if($minute === "04") {
-            echo("YYYY");
-            return "YYYY";
-        }
+        echo ($aReturn);
+        return $aReturn;
     }
 }
