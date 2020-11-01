@@ -59,5 +59,9 @@ class BerlinClockKata{
             echo("ROOO");
             return "ROOO";
         }
+        if ($heure === "10"){
+            echo("RROO");
+            return "RROO";
+        }
     }
 }
