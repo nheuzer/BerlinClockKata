@@ -316,4 +316,15 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals($expected,$actual);
     }
 
+    public function test_display_given23h59m59s_shouldReturn_O_RRRR_RRRO_YYRYYRYYRYY_YYYY(){
+        //Arrange
+        $test = new BerlinClockKata();
+        $time = "23:59:59";
+        $expected = "O" . "\n" . "RRRR" . "\n" . "RRRO" . "\n" . "YYRYYRYYRYY" . "\n" . "YYYY";
+        //Act
+        $actual = $test->afficher_horloge_entiere($time);
+        //Assert
+        $this->assertEquals($expected,$actual);
+    }
+
 }
