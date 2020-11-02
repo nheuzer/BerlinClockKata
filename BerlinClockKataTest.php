@@ -7,30 +7,22 @@ use PHPUnit\Framework\TestCase;
 
 class BerlinClockKataTest extends TestCase
 {
-    private $berlin_clock_kata;
-
-    protected function setUp() : void
-    {
-        parent::setUp();
-        $this->berlin_clock_kata = new BerlinClockKata();
-    }
-
-    public function test_display_given00_shouldReturnOOOO(){
+    public function test_display_given00m_shouldReturnOOOO(){
         //Arrange
         $test = new BerlinClockKata();
         $minute = "00";
         //Act
-        $actual = $test->afficher_par_minutes($minute);
+        $actual = $test->afficher_par_minute($minute);
         //Assert
         $this->assertEquals("OOOO",$actual);
     }
 
-    public function test_display_given01_shouldReturnYOOO(){
+    public function test_display_given01m_shouldReturnYOOO(){
         //Arrange
         $test = new BerlinClockKata();
         $minute = "01";
         //Act
-        $actual = $test->afficher_par_minutes($minute);
+        $actual = $test->afficher_par_minute($minute);
         //Assert
         $this->assertEquals("YOOO",$actual);
     }
@@ -40,7 +32,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $minute = "02";
         //Act
-        $actual = $test->afficher_par_minutes($minute);
+        $actual = $test->afficher_par_minute($minute);
         //Assert
         $this->assertEquals("YYOO",$actual);
     }
@@ -50,7 +42,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $minute = "03";
         //Act
-        $actual = $test->afficher_par_minutes($minute);
+        $actual = $test->afficher_par_minute($minute);
         //Assert
         $this->assertEquals("YYYO",$actual);
     }
@@ -60,7 +52,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $minute = "04";
         //Act
-        $actual = $test->afficher_par_minutes($minute);
+        $actual = $test->afficher_par_minute($minute);
         //Assert
         $this->assertEquals("YYYY",$actual);
     }
@@ -190,7 +182,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $heure = "00";
         //Act
-        $actual = $test->afficher_par_heures($heure);
+        $actual = $test->afficher_par_heure($heure);
         //Assert
         $this->assertEquals("OOOO",$actual);
     }
@@ -200,7 +192,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $heure = "01";
         //Act
-        $actual = $test->afficher_par_heures($heure);
+        $actual = $test->afficher_par_heure($heure);
         //Assert
         $this->assertEquals("ROOO",$actual);
     }
@@ -210,7 +202,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $heure = "02";
         //Act
-        $actual = $test->afficher_par_heures($heure);
+        $actual = $test->afficher_par_heure($heure);
         //Assert
         $this->assertEquals("RROO",$actual);
     }
@@ -220,7 +212,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $heure = "03";
         //Act
-        $actual = $test->afficher_par_heures($heure);
+        $actual = $test->afficher_par_heure($heure);
         //Assert
         $this->assertEquals("RRRO",$actual);
     }
@@ -230,7 +222,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $heure = "04";
         //Act
-        $actual = $test->afficher_par_heures($heure);
+        $actual = $test->afficher_par_heure($heure);
         //Assert
         $this->assertEquals("RRRR",$actual);
     }
@@ -290,7 +282,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $seconde = "00";
         //Act
-        $actual = $test->afficher_par_secondes($seconde);
+        $actual = $test->afficher_par_seconde($seconde);
         //Assert
         $this->assertEquals("R",$actual);
     }
@@ -300,7 +292,7 @@ class BerlinClockKataTest extends TestCase
         $test = new BerlinClockKata();
         $seconde = "01";
         //Act
-        $actual = $test->afficher_par_secondes($seconde);
+        $actual = $test->afficher_par_seconde($seconde);
         //Assert
         $this->assertEquals("O",$actual);
     }

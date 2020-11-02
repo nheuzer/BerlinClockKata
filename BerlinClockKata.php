@@ -2,7 +2,7 @@
 namespace BerlinClockKata;
 class BerlinClockKata{
 
-    public function afficher_par_minutes($minute) : string{
+    public function afficher_par_minute($minute) : string{
         $nombreDeMinutes = substr($minute, -1);
         $difference = 4 - $nombreDeMinutes;
         $aReturn = "";
@@ -36,7 +36,7 @@ class BerlinClockKata{
         return $aReturn;
     }
 
-    public function afficher_par_heures($heure) : string{
+    public function afficher_par_heure($heure) : string{
         $nombreDHeures = substr($heure, -1);
         $difference = 4 - $nombreDHeures;
         $aReturn = "";
@@ -63,7 +63,7 @@ class BerlinClockKata{
         return $aReturn;
     }
 
-    public function afficher_par_secondes($seconde) : string{
+    public function afficher_par_seconde($seconde) : string{
         $aReturn = "";
         if ($seconde%2 === 0){
             $aReturn = "R";
@@ -83,8 +83,8 @@ class BerlinClockKata{
         $heurePar5 = $heure - $moduloHeure;
         $moduloMinute = $minute%5;
         $minutePar5 = $minute - $moduloMinute;
-        $aReturn = $this->afficher_par_secondes($seconde)."\n".$this->afficher_par_5_heures($heurePar5)."\n".$this->afficher_par_heures($moduloHeure)."\n"
-            .$this->afficher_par_5_minutes($minutePar5)."\n".$this->afficher_par_minutes($moduloMinute);
+        $aReturn = $this->afficher_par_seconde($seconde)."\n".$this->afficher_par_5_heures($heurePar5)."\n".$this->afficher_par_heure($moduloHeure)."\n"
+            .$this->afficher_par_5_minutes($minutePar5)."\n".$this->afficher_par_minute($moduloMinute);
         echo "$aReturn";
         return $aReturn;
     }
